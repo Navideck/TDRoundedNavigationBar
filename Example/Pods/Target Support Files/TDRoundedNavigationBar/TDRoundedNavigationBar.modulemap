@@ -1,0 +1,6 @@
+framework module TDRoundedNavigationBar {
+  umbrella header "TDRoundedNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

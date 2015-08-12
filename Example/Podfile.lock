@@ -1,0 +1,14 @@
+PODS:
+  - TDRoundedNavigationBar (0.1.0)
+
+DEPENDENCIES:
+  - TDRoundedNavigationBar (from `../`)
+
+EXTERNAL SOURCES:
+  TDRoundedNavigationBar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TDRoundedNavigationBar: 52309a275b221a58f9ea0540b7381550481bd294
+
+COCOAPODS: 0.38.2
