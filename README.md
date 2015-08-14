@@ -54,7 +54,7 @@ You can customise the properties of TDRoundedNavigationBar inside TDRoundedNavig
 
 ## Author
 
-Fotis Dimanidis, fotis@navideck.com
+Fotis Dimanidis, ([@axaiOS](http://twitter.com/axaiOS)).
 
 ## License
 
