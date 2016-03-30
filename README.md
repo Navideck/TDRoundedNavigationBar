@@ -1,6 +1,5 @@
 # TDRoundedNavigationBar
 
-[![CI Status](http://img.shields.io/travis/Fotis Dimanidis/TDRoundedNavigationBar.svg?style=flat)](https://travis-ci.org/Fotis Dimanidis/TDRoundedNavigationBar)
 [![Version](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
 [![License](https://img.shields.io/cocoapods/l/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
 [![Platform](https://img.shields.io/cocoapods/p/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
@@ -54,7 +53,7 @@ You can customise the properties of TDRoundedNavigationBar inside TDRoundedNavig
 
 ## Author
 
-Fotis Dimanidis, ([@axaiOS](http://twitter.com/axaiOS)).
+Fotis Dimanidis, ([@fotiDim](http://twitter.com/fotidim)).
 
 ## License
 
