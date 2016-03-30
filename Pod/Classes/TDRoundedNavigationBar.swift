@@ -81,12 +81,15 @@ class TDRoundedNavigationBar: UINavigationBar {
         }
     }
     
-    override func sizeThatFits(size: CGSize) -> CGSize {    //Set bar & spacing size. Used then status bar is hidden to give some top space to our navigation bar.
+    override func sizeThatFits(size: CGSize) -> CGSize {    //Set bar & spacing size. Used when the status bar is hidden to give some top space to our navigation bar.
+        
+        guard let superview = self.superview else {return size}
+        
         var computedHeight = navBarHeight
         if UIApplication.sharedApplication().statusBarHidden {
             computedHeight += navBarSpacingWhenStatusBarHidden
         }
-        let newSize = CGSize(width: self.superview!.bounds.size.width - CGFloat(navBarSideSpacing), height: CGFloat(computedHeight))
+        let newSize = CGSize(width: superview.bounds.size.width - CGFloat(navBarSideSpacing), height: CGFloat(computedHeight))
         return newSize
     }
     
