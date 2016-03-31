@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YLt-G5-xr0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YLt-G5-xr0">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--TDRoundedNavigationBar-->
@@ -16,21 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-63-0gg">
-                                <rect key="frame" x="263" y="285" width="74" height="30"/>
-                                <state key="normal" title="Go to Next">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-63-0gg">
+                                <rect key="frame" x="244" y="341" width="113" height="30"/>
+                                <state key="normal" title="See the features">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="F1A-wt-WZL" kind="show" id="rfg-30-kbs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8n-7x-f63">
+                                <rect key="frame" x="20" y="270" width="560" height="61"/>
+                                <string key="text">TDRoundedNavigationBar is an iOS UINavigationBar subclass that you can use in your own projects. It supercharges UINavigationBar with many cool features.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="T8n-7x-f63" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="3f0-lh-Xrr"/>
                             <constraint firstItem="jTu-63-0gg" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="5WP-cU-KA5"/>
                             <constraint firstItem="jTu-63-0gg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8fw-FH-5Rb"/>
+                            <constraint firstItem="T8n-7x-f63" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="AFI-pB-RwC"/>
+                            <constraint firstItem="T8n-7x-f63" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Qal-4k-Dp6"/>
+                            <constraint firstItem="jTu-63-0gg" firstAttribute="top" secondItem="T8n-7x-f63" secondAttribute="bottom" constant="20" id="Qi9-Rt-42l"/>
+                            <constraint firstItem="T8n-7x-f63" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="bac-An-VA9"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5WP-cU-KA5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="TDRoundedNavigationBar" id="6a9-Zz-165">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="gWA-Pv-MIR"/>
@@ -40,10 +58,10 @@
             </objects>
             <point key="canvasLocation" x="973" y="429"/>
         </scene>
-        <!--Welcome to next-->
+        <!--Features-->
         <scene sceneID="OJH-Ny-8Aj">
             <objects>
-                <viewController title="Welcome to next" id="F1A-wt-WZL" sceneMemberID="viewController">
+                <viewController title="Features" id="F1A-wt-WZL" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6TF-nr-aSL"/>
                         <viewControllerLayoutGuide type="bottom" id="xxh-zT-kuO"/>
@@ -51,7 +69,28 @@
                     <view key="view" contentMode="scaleToFill" id="pBB-uW-nrP">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-x2-aA7">
+                                <rect key="frame" x="20" y="178" width="560" height="244"/>
+                                <mutableString key="text">- Rounded corners: Round the corner's of your navigation bar using any radius. You can even leave the corners square by setting radius to zero.
+- Custom bar height: Make you navigation bar taller or shorter.
+- Custom bar width: Set the space you want to leave on the left and right of the navigation bar.
+- Auto item positioning: TDRoundedNavigationBar will position automatically every Navigation Bar element including title, back button or custom UIBarButtonItems to adapt to the custom size you 've set.
+- Vertical Bar positioning: Set the distance you want from the top of the screen when the status bar is hidden.
+- iPhone and iPad support.
+- Supports any orientation (portrait or landscape).</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vV3-x2-aA7" firstAttribute="leading" secondItem="pBB-uW-nrP" secondAttribute="leadingMargin" id="4W2-io-yMv"/>
+                            <constraint firstItem="vV3-x2-aA7" firstAttribute="trailing" secondItem="pBB-uW-nrP" secondAttribute="trailingMargin" id="NEa-fZ-uIn"/>
+                            <constraint firstItem="vV3-x2-aA7" firstAttribute="centerY" secondItem="pBB-uW-nrP" secondAttribute="centerY" id="Sxy-u6-VGM"/>
+                            <constraint firstItem="vV3-x2-aA7" firstAttribute="centerX" secondItem="pBB-uW-nrP" secondAttribute="centerX" id="hTL-H0-Is5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqy-BR-XS2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,7 +105,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5XG-nR-3Ft" customClass="TDRoundedNavigationBar" customModule="TDRoundedNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.21176470589999999" green="0.84313725490000002" blue="0.71764705880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.12156862745098039" green="0.42412241742334511" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -78,4 +121,5 @@
             <point key="canvasLocation" x="98" y="429"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="1" green="0.82352941176470584" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
 </document>
