@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "TDRoundedNavigationBar"
-  s.version          = "1.0.0"
+  s.version          = "1.1.0"
   s.summary          = "Custom UINavigationBar with rounded corners and many other features - written in Swift."
   s.description      = <<-DESC
 Written for Swift2 and iOS 9
