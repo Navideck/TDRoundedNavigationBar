@@ -1,19 +1,13 @@
 # TDRoundedNavigationBar
 
-[![Version](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
-[![License](https://img.shields.io/cocoapods/l/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
-[![Platform](https://img.shields.io/cocoapods/p/TDRoundedNavigationBar.svg?style=flat)](http://cocoapods.org/pods/TDRoundedNavigationBar)
-
 <p align="center">
 <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat" alt="Platform: iOS 9+" />
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift2-f48041.svg?style=flat" alt="Language: Swift 2" /></a>
 <a href="https://cocoapods.org/pods/TDRoundedNavigationBar"><img src="https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg?style=flat" alt="Cocoapods compatible" /></a>
 <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
-</p>
-
-
 ![TDRoundedNavigationBar1](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/TDRoundedNavigationBar1.png)
 ![TDRoundedNavigationBar2](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/TDRoundedNavigationBar2.png)
+</p>
 
 **TDRoundedNavigationBar** is an iOS UINavigationBar subclass that you can use in your own projects. It supercharges UINavigationBar with these features:
 
