@@ -5,8 +5,8 @@
 <a href="https://cocoapods.org/pods/TDRoundedNavigationBar"><img src="https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg?style=flat" alt="Cocoapods compatible" /></a>
 <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
 
-![TDRoundedNavigationBar1](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/TDRoundedNavigationBar1.png)
-![TDRoundedNavigationBar2](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/TDRoundedNavigationBar2.png)
+![TDRoundedNavigationBar1](https://github.com/Navideck/TDRoundedNavigationBar/raw/master//Screenshots/TDRoundedNavigationBar1.png)
+![TDRoundedNavigationBar2](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/Screenshots/TDRoundedNavigationBar2.png)
 
 
 **TDRoundedNavigationBar** is an iOS UINavigationBar subclass that you can use in your own projects. It supercharges UINavigationBar with these features:
@@ -37,7 +37,7 @@ or if you don't want to use CocoaPods:
 For your own app, after you follow the installation instructions, either:
 
 Through Interface Builder
-> Open your Storyboard find your Navigation Bar (probably in your Navigation Controller) and set it's Custom Class property to "TDRoundedNavigationBar". That's it!
+> Open your Storyboard find your Navigation Bar (probably in your Navigation Controller) and set it's Class property and Module to "TDRoundedNavigationBar". That's it!
 
 Through code 
 > Instantiate using the **init(frame: CGRect)** method
