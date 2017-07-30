@@ -9,10 +9,10 @@
 
 Pod::Spec.new do |s|
   s.name             = "TDRoundedNavigationBar"
-  s.version          = "1.1.0"
+  s.version          = "1.2.0"
   s.summary          = "Custom UINavigationBar with rounded corners and many other features - written in Swift."
   s.description      = <<-DESC
-Written for Swift2 and iOS 9
+Written in Swift 3 for iOS 9+
 -------------
 
 TDRoundedNavigationBar is an iOS UINavigationBar subclass that you can use in your own projects. It supercharges UINavigationBar with these features:
@@ -36,10 +36,10 @@ TDRoundedNavigationBar is an iOS UINavigationBar subclass that you can use in yo
   s.platform     = :ios, '9.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'TDRoundedNavigationBar' => ['Pod/Assets/*.png']
-  }
+  s.source_files = 'TDRoundedNavigationBar/*.swift'
+  # s.resource_bundles = {
+  #   'TDRoundedNavigationBar' => ['Pod/Assets/*.png']
+  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

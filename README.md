@@ -1,7 +1,7 @@
 # TDRoundedNavigationBar
 
 <img src="https://img.shields.io/badge/platform-iOS%209%2B-blue.svg?style=flat" alt="Platform: iOS 9+" />
-<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift2-f48041.svg?style=flat" alt="Language: Swift 2" /></a>
+<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/language-swift3-f48041.svg?style=flat" alt="Language: Swift 3" /></a>
 <a href="https://cocoapods.org/pods/TDRoundedNavigationBar"><img src="https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg?style=flat" alt="Cocoapods compatible" /></a>
 <img src="https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat" alt="License: MIT" />
 
@@ -43,7 +43,7 @@ Through code
 > Instantiate using the **init(frame: CGRect)** method
 
 ## Requirements
-Written for Swift 2 and iOS 9
+Written in Swift 3 for iOS 9+
 
 ## Customization
 
