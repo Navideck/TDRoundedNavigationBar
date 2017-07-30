@@ -47,13 +47,13 @@ Written in Swift 3 for iOS 9+
 
 ## Customization
 
-You can customise the properties of TDRoundedNavigationBar inside TDRoundedNavigationBar.swift. 
+You can customise the properties of TDRoundedNavigationBar. 
 
 - **navBarHeight** sets the bar's height
 - **navBarRadius** sets the corner radius
-- **navBarSideSpacing** set the spacing on the left and right
-- **navBarSpacingWhenStatusBarHidden** set the distance from the top of the screen when the status bar is hidden so that the bar has a nice floating effect.
-- **corners** set which corners will be rounded
+- **navBarSideSpacing** sets the spacing on the left and right
+- **navBarSpacingWhenStatusBarHidden** sets the distance from the top of the screen when the status bar is hidden so that the bar has a nice floating effect.
+- **corners** sets which corners will be rounded
 
 ## Author
 
