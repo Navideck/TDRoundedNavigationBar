@@ -15,7 +15,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-//        let roundedBar = navigationController?.navigationBar as! TDRoundedNavigationBar
+//        guard let roundedBar = navigationController?.navigationBar as? TDRoundedNavigationBar else {return}
+//        roundedBar.corners = [UIRectCorner.bottomLeft, UIRectCorner.bottomRight]
     }
 
     override func didReceiveMemoryWarning() {

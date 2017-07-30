@@ -10,7 +10,6 @@ import UIKit
 
 public class TDRoundedNavigationBar: UINavigationBar {
     
-    //Set your properties here
     public var navBarHeight = 60.0
     public var navBarRadius = 7.5    //Set to 0.0 for square corners
     public var navBarSideSpacing = 20.0
