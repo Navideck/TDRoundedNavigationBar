@@ -6,8 +6,7 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg)](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
-![TDRoundedNavigationBar1](https://github.com/Navideck/TDRoundedNavigationBar/raw/master//Screenshots/TDRoundedNavigationBar1.png)
-![TDRoundedNavigationBar2](https://github.com/Navideck/TDRoundedNavigationBar/raw/master/Screenshots/TDRoundedNavigationBar2.png)
+![TDRoundedNavigationBar](https://github.com/Navideck/TDRoundedNavigationBar/raw/master//Screenshots/TDRoundedNavigationBar.gif)
 
 
 **TDRoundedNavigationBar** is an iOS UINavigationBar subclass that you can use in your own projects. It supercharges UINavigationBar with these features:
