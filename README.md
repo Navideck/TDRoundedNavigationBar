@@ -2,6 +2,7 @@
 
 [![iOS 9+](https://img.shields.io/badge/platform-iOS%209%2B-blue.svg)](https://img.shields.io/badge/platform-iOS%209%2B-blue.svg)
 [![Swift 3](https://img.shields.io/badge/language-swift3-f48041.svg)](https://img.shields.io/badge/language-swift3-f48041.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg)](https://img.shields.io/cocoapods/v/TDRoundedNavigationBar.svg)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
@@ -21,14 +22,22 @@
 
 ## Installation
 
-TDRoundedNavigationBar is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+### Carthage
+Add the following line to your Cartfile:
 
-> ```pod "TDRoundedNavigationBar"```
+```github "Navideck/TDRoundedNavigationBar"```
 
-or if you don't want to use CocoaPods:
+### Cocoapods
+Add the following line to your Podfile:
 
-> 'Drag the "TDRoundedNavigationBar.swift" file inside your project
+```pod "TDRoundedNavigationBar"```
+
+### Manually
+Drag `TDRoundedNavigationBar.swift` inside your project
+
+-- or --
+
+drag `TDRoundedNavigationBar.xcodeproj` as subproject and then add `TDRoundedNavigationBar` in `Target Dependencies` and in `Embedded Frameworks`
 
 ## Usage
 
