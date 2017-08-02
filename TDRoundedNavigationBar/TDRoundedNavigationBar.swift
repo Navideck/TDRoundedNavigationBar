@@ -30,7 +30,6 @@ public class TDRoundedNavigationBar: UINavigationBar {
     @IBInspectable public var roundedBottomRightCorner: Bool = true
     @IBInspectable public var roundedBottomLeftCorner: Bool = true
     @IBInspectable public var cornerRadius : Double = 7.5    //Set to 0.0 for square corners
-    @IBInspectable public var color : UIColor?
     private var corners: UIRectCorner {
         get {
             var roundedCorners : UIRectCorner = UIRectCorner(rawValue: 0)
@@ -74,13 +73,15 @@ public class TDRoundedNavigationBar: UINavigationBar {
         
         TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset, for: UIBarMetrics.default)
         TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset - 5, for: UIBarMetrics.compact)
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackgroundVerticalPositionAdjustment(offset, for: .default)
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonBackgroundVerticalPositionAdjustment(offset, for: .default)
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffsetMake(0, offset), for: .default)  
         
-        if let navBarColorVal = color {
-            self.barTintColor = navBarColorVal
-        }
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackgroundVerticalPositionAdjustment(offset, for: .default)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackgroundVerticalPositionAdjustment(offset - 5, for: .compact)
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonBackgroundVerticalPositionAdjustment(offset, for: .default)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonBackgroundVerticalPositionAdjustment(offset - 5, for: .compact)
+        
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffsetMake(0, offset), for: .default)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffsetMake(0, offset - 5), for: .compact)
     }
     
     
@@ -120,14 +121,11 @@ public class TDRoundedNavigationBar: UINavigationBar {
         
         guard let superview = self.superview else {return size}
         
-        var computedHeight = navBarHeight
-        if UIApplication.shared.isStatusBarHidden {
-            computedHeight += verticalSpacing + 5
+        var height = navBarHeight + verticalSpacing
+        if UIApplication.shared.isStatusBarHidden || UIApplication.shared.statusBarFrame.height > 20 {  //Larger than 20 means double height status bar (e.g. in call)
+            height += 5
         }
-        else {
-            computedHeight += verticalSpacing
-        }
-        let newSize = CGSize(width: superview.bounds.size.width - CGFloat(horizontalSpacing), height: CGFloat(computedHeight))
+        let newSize = CGSize(width: superview.bounds.size.width - CGFloat(horizontalSpacing), height: CGFloat(height))
         return newSize
     }
     
