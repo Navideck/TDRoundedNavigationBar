@@ -73,6 +73,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
         let offset : CGFloat = (44 - CGFloat(navBarHeight))/2
         
         TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset, for: UIBarMetrics.default)
+        TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset - 5, for: UIBarMetrics.compact)
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackgroundVerticalPositionAdjustment(offset, for: .default)
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonBackgroundVerticalPositionAdjustment(offset, for: .default)
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffsetMake(0, offset), for: .default)  
