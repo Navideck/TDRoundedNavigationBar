@@ -10,12 +10,45 @@ import UIKit
 
 public class TDRoundedNavigationBar: UINavigationBar {
     
-    public var navBarHeight = 60.0
-    public var navBarRadius = 7.5    //Set to 0.0 for square corners
-    public var navBarSideSpacing = 20.0
-    public var navBarSpacingWhenStatusBarHidden = 5.0
-    public var corners = UIRectCorner.allCorners // [UIRectCorner.bottomLeft, UIRectCorner.bottomRight]
-    public var navBarColor : UIColor? //= UIColor.blueColor()
+    @IBInspectable public var navBarHeight: Double = 60.0 {
+        didSet {
+            setupAppearance()
+        }
+    }
+    @IBInspectable public var horizontalSpacing : Double = 20.0 {
+        didSet {
+            setupAppearance()
+        }
+    }
+    @IBInspectable public var verticalSpacing : Double = 0.0 {
+        didSet {
+            setupAppearance()
+        }
+    }
+    @IBInspectable public var roundedTopLeftCorner: Bool = true
+    @IBInspectable public var roundedTopRightCorner: Bool = true
+    @IBInspectable public var roundedBottomRightCorner: Bool = true
+    @IBInspectable public var roundedBottomLeftCorner: Bool = true
+    @IBInspectable public var cornerRadius : Double = 7.5    //Set to 0.0 for square corners
+    @IBInspectable public var color : UIColor?
+    private var corners: UIRectCorner {
+        get {
+            var roundedCorners : UIRectCorner = UIRectCorner(rawValue: 0)
+            if roundedTopLeftCorner {
+                roundedCorners = roundedCorners.union(.topLeft)
+            }
+            if roundedTopRightCorner {
+                roundedCorners = roundedCorners.union(.topRight)
+            }
+            if roundedBottomRightCorner {
+                roundedCorners = roundedCorners.union(.bottomRight)
+            }
+            if roundedBottomLeftCorner {
+                roundedCorners = roundedCorners.union(.bottomLeft)
+            }
+            return roundedCorners
+        }
+    }
     
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -33,7 +66,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
     required public init?(coder aDecoder: NSCoder) {   //For IB initialization
         super.init(coder: aDecoder)
         setupAppearance()
-    }   
+    }
     
     func setupAppearance() {
         // Compensate for height change by moving back button
@@ -44,7 +77,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonBackgroundVerticalPositionAdjustment(offset, for: .default)
         UIBarButtonItem.appearance(whenContainedInInstancesOf: [TDRoundedNavigationBar.self]).setBackButtonTitlePositionAdjustment(UIOffsetMake(0, offset), for: .default)  
         
-        if let navBarColorVal = navBarColor {
+        if let navBarColorVal = color {
             self.barTintColor = navBarColorVal
         }
     }
@@ -56,7 +89,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
         let bounds = layer.bounds
         let maskPath = UIBezierPath(roundedRect: bounds,
             byRoundingCorners: corners,
-            cornerRadii: CGSize(width: navBarRadius, height: navBarRadius))
+            cornerRadii: CGSize(width: cornerRadius, height: cornerRadius))
         let maskLayer = CAShapeLayer()  //?
         maskLayer.frame = bounds
         maskLayer.path = maskPath.cgPath
@@ -88,9 +121,12 @@ public class TDRoundedNavigationBar: UINavigationBar {
         
         var computedHeight = navBarHeight
         if UIApplication.shared.isStatusBarHidden {
-            computedHeight += navBarSpacingWhenStatusBarHidden
+            computedHeight += verticalSpacing + 5
         }
-        let newSize = CGSize(width: superview.bounds.size.width - CGFloat(navBarSideSpacing), height: CGFloat(computedHeight))
+        else {
+            computedHeight += verticalSpacing
+        }
+        let newSize = CGSize(width: superview.bounds.size.width - CGFloat(horizontalSpacing), height: CGFloat(computedHeight))
         return newSize
     }
     
