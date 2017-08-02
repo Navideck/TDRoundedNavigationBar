@@ -10,7 +10,7 @@ import UIKit
 
 public class TDRoundedNavigationBar: UINavigationBar {
     
-    @IBInspectable public var navBarHeight: Double = 60.0 {
+    @IBInspectable public var height: Double = 160.0 {
         didSet {
             setupAppearance()
         }
@@ -69,7 +69,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
     
     func setupAppearance() {
         // Compensate for height change by moving back button
-        let offset : CGFloat = (44 - CGFloat(navBarHeight))/2
+        let offset : CGFloat = (44 - CGFloat(height))/2
         
         TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset, for: UIBarMetrics.default)
         TDRoundedNavigationBar.appearance().setTitleVerticalPositionAdjustment(offset - 5, for: UIBarMetrics.compact)
@@ -105,7 +105,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
                 var frame = view.frame
                 if view.tag == 0 {
                     // On the first layout we work out what the actual position should be by applying our offset to the default position.
-                    frame.origin.y = (CGFloat(navBarHeight) - view.frame.size.height)/2
+                    frame.origin.y = (CGFloat(height) - view.frame.size.height)/2
                     view.tag = Int(frame.origin.y)
                 }
                 else{
@@ -121,7 +121,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
         
         guard let superview = self.superview else {return size}
         
-        var height = navBarHeight + verticalSpacing
+        var height = self.height + verticalSpacing
         if UIApplication.shared.isStatusBarHidden || UIApplication.shared.statusBarFrame.height > 20 {  //Larger than 20 means double height status bar (e.g. in call)
             height += 5
         }
@@ -131,7 +131,7 @@ public class TDRoundedNavigationBar: UINavigationBar {
     
     override public var bounds : CGRect {      //Set bar size
         didSet {
-            self.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width, height: CGFloat(navBarHeight))
+            self.frame = CGRect(x: bounds.origin.x, y: bounds.origin.y, width: bounds.size.width, height: CGFloat(height))
         }
     }
 }
