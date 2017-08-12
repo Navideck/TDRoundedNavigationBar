@@ -10,7 +10,7 @@ import UIKit
 
 public class TDRoundedNavigationBar: UINavigationBar {
     
-    @IBInspectable public var height: Double = 160.0 {
+    @IBInspectable public var height: Double = 60.0 {
         didSet {
             setupAppearance()
         }
